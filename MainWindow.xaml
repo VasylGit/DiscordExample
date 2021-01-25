@@ -29,7 +29,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="118,32,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="118,32,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="424,32,0,0" VerticalAlignment="Top" Width="76"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="722,32,0,0" VerticalAlignment="Top" Width="76"/>
 
