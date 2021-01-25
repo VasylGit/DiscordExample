@@ -24,5 +24,21 @@ namespace DiscordExample
         {
             InitializeComponent();
         }
-    }
-}
+
+        private void txtThing_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            RTB.Document.Blocks.Clear();
+            string longThing = txtThing.Text;
+            //stolen from: https://docs.microsoft.com/en-us/dotnet/desktop/wpf/controls/richtextbox-overview?view=netframeworkdesktop-4.8
+            FlowDocument myFlowDoc = new FlowDocument();
+            Run myRun = new Run("This is flow content and you can ");
+            Bold myBold = new Bold(new Run($"edit me, {longThing}"));
+
+            Paragraph myParagraph = new Paragraph();
+            myParagraph.Inlines.Add(myRun);
+            myParagraph.Inlines.Add(myBold);
+
+            myFlowDoc.Blocks.Add(myParagraph);
+            RTB.Document = myFlowDoc;
+        }
+}   }

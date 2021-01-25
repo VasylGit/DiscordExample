@@ -6,32 +6,11 @@
         xmlns:local="clr-namespace:DiscordExample"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1200">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="457" Margin="900,86,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="292" Padding="0"/>
-        <RichTextBox HorizontalAlignment="Left" Height="457" Margin="0,86,0,0" VerticalAlignment="Top" Width="300" Padding="0">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <RichTextBox HorizontalAlignment="Left" Height="457" Margin="300,86,0,0" VerticalAlignment="Top" Width="300" Padding="0">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <RichTextBox HorizontalAlignment="Left" Height="457" Margin="600,86,0,0" VerticalAlignment="Top" Width="300">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="118,32,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="424,32,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="722,32,0,0" VerticalAlignment="Top" Width="76"/>
+    <StackPanel>
+        <Label Content="Type words."/>
+        <TextBox x:Name="txtThing" TextChanged="txtThing_TextChanged" />
+        <Label Content="RTB"/>
+        <RichTextBox x:Name="RTB" AcceptsReturn="True"/>
+    </StackPanel>
 
-    </Grid>
 </Window>
